@@ -1,24 +1,23 @@
 package com.example.aplikasikotlin
 
-import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.ext.junit.runners.AndroidJUnit4
+fun main(args: Array<String>) {
+    println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    biodata("Qhiyas Adi Saputra","2A","Magetan")
+    hobby("Menonton","Memancing emosi orang")
+    println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+}
 
-import org.junit.Test
-import org.junit.runner.RunWith
+fun biodata(nama: String, kelas:String ,Alamat:String){
+    val biodata = """
+        nama = $nama
+        kelas = $kelas 
+        Alamat= $Alamat
+    """
+    print(biodata)
+}
 
-import org.junit.Assert.*
+fun hobby(nama:String, desc:String){
+    println("hobby = $nama")
+    println(desc)
 
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-@RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
-    @Test
-    fun useAppContext() {
-        // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.aplikasikotlin", appContext.packageName)
-    }
 }
